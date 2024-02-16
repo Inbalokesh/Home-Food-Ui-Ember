@@ -1,0 +1,49 @@
+<section class="order_details">
+
+    <div class="popup">
+        <h3>Order id: {{this.model}}</h3>
+        <div class="phead">
+            <p>Food Name</p>
+            <p class="quan">Quantity</p>
+            <p>Price</p>
+            <p>Delivery</p>
+        </div>
+        <div class="orderr"><img src="https://iili.io/HMeJ2uj.jpg" alt="Pongal image">
+            <div class="name">
+                <p class="fname">Pongal</p>
+                <p class="fname">Veg</p>
+            </div>
+            <p class="quantity">2</p>
+            <p class="cost">Rs. 60</p>
+            <p class="deliveryStatus">(-) Cancelled</p>
+        </div>
+        <div class="delivery-address-box">
+            <div class="address-head"><img class="greenHouse" src="/images/Green house.png" alt="green house image">
+                <h2 class="side-head">Delivery details</h2>
+            </div>
+            <div class="address-content">
+                <p class="delivery-name">Hari</p>
+                <p>23 Pillaiyar Koil 2nd Cross St, Phase-1, Chennai</p>
+                <p>Kancheepuram - 600096</p>
+                <p>Mobile - 6383355909</p>
+            </div>
+        </div>
+        <div class="dpara">
+            <div class="lpara">
+                <p>Ordered time</p>
+                <p>Total</p>
+                <p>Payment</p>
+            </div>
+            <div class="spara">
+                <p>14th February 2024,Wed 6:38:57 PM</p>
+                <p>Rs.60</p>
+                <p>COD</p>
+            </div>
+        </div>
+        <p class="impnote">Note: You can only cancel your order on the same day of the placement.</p>
+        <div class="cbut">
+            <button class="re_order" onclick="re_order()" type="button">Re-order</button>
+            <LinkTo @route="profile"><button type="button">Close</button></LinkTo>   
+        </div>
+    </div>
+</section>

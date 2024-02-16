@@ -1,0 +1,90 @@
+<section>
+    <div class="side">
+        <div class="pro">
+            <h1>Profile</h1>
+            <div class="pbox">
+                <div class="imgb">
+                    <img src="images/img.jpg" alt="Profile image" height="250px" width="250px">
+                    <div class="button_row">
+                        <button type="button" id="edit-btn">Edit profile</button>
+                        <button type="button" id="delete_user">Delete</button>
+                        <button type="submit" id="logout_user">Logout</button>
+                    </div>
+
+                </div>
+                <div>
+                    <div class="sep">
+                        <label>Name</label>
+                        <input type="text" id="user_name" placeholder="Your Name" disabled="">
+                    </div>
+                    <div class="sep">
+                        <label>Mobile No</label>
+                        <input type="tel" id="user_phonenumber" placeholder="Mobile No" disabled="">
+                    </div>
+                    <div class="sep">
+                        <label>Email</label>
+                        <input type="email" id="user_email" placeholder="Email" disabled="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history">
+        <h2>
+            My Orders
+        </h2>
+        <div class="overflowbox">
+            <div class="obox">
+                <div class="item">
+                    <div class="ihead">
+                        <h3>Order:#2</h3>
+                    </div>
+                    <h3>Items(1)</h3>
+                    <p>14th February 2024,Wed 6:38:57 PM</p>
+                </div>
+                <div class="order">
+                    <div class="item_list">
+                        <h4>Pongal (2)</h4>
+                    </div>
+                    <div class="total">
+                        <h3>Total</h3>
+                        <h4>Rs. 60</h4>
+                    </div>
+                    <div class="order_by">
+                        <h4>Ordered by: Hari</h4>
+                    </div>
+
+                    <LinkTo @route="order.item" @model="1" class="view_button">
+                        <button type="button">View details</button>
+                    </LinkTo>
+                </div>
+            </div> 
+
+            <div class="obox">
+                <div class="item">
+                    <div class="ihead">
+                        <h3>Order:#2</h3>
+                    </div>
+                    <h3>Items(1)</h3>
+                    <p>14th February 2024,Wed 6:38:57 PM</p>
+                </div>
+                <div class="order">
+                    <div class="item_list">
+                        <h4>Pongal (2)</h4>
+                    </div>
+                    <div class="total">
+                        <h3>Total</h3>
+                        <h4>Rs. 60</h4>
+                    </div>
+                    <div class="order_by">
+                        <h4>Ordered by: Hari</h4>
+                    </div>
+                    <LinkTo class="view_button" @route="order.item" @model="2">
+                        <button type="button">View details</button>
+                    </LinkTo>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

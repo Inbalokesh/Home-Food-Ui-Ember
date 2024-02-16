@@ -1,0 +1,81 @@
+<h1 class="cart-head">Cart</h1>
+
+<div class="list">
+    <div class="lorder">
+        <img class="emptyCart" src="/images/empty cart.jpg" alt="empty cart image" style="">
+        <h2 class="noItems" style="">No Items in your cart!!</h2>
+        <div>
+            <LinkTo @route="menu">
+                <input type="button" value="+ Add items" id="addItems" style="width: 27rem;">
+            </LinkTo>
+        </div>
+        {{!-- <div class="item-box">
+            <img src="https://iili.io/HMeJ2uj.jpg" alt="Pongal image" class="food">
+            <div class="item-details">
+                <h2>Pongal</h2>
+                <div class="item-detail">
+                    <div class="linfo">
+                        <p>Quantity:</p>
+                        <p>Price:</p>
+                        <p>Delivery time:</p>
+                    </div>
+                    <div class="rinfo">
+                        <h4>200 g</h4>
+                        <h4 class="food_price">Rs.30</h4>
+                        <div class="dropbox">
+                            <select class="select" required="required" name="time">
+                                <option>-- Select the delivery time --</option>
+                                <option class="selected_option" id="option_1" value="Breakfast (7:30 AM to 9:00 AM)">
+                                    Breakfast (7:30 AM to 9:00 AM)</option>
+                                <option class="selected_option" id="option_2" value="Lunch (12:30 AM to 2:00 PM)">Lunch
+                                    (12:30 AM to 2:00 PM)</option>
+                                <option class="selected_option" id="option_3" value="Dinner (7:00 PM to 8:30 PM)">Dinner
+                                    (7:00 PM to 8:30 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="slist">
+                    <div class="add">
+                        <input type="number" name="quantity" id="quantity" min="1" max="10" value="1">
+                    </div>
+                    <button type="button" class="remove_cart"
+                        data-cart_id="8f308f4f-daa9-420d-82fb-bfc2d3cf0d06">Remove</button>
+                </div>
+            </div>
+        </div> --}}
+    </div>
+
+    <div class="summary" style="display:none">
+        <h2>SUMMARY</h2>
+        <div class="sumlist">
+            <div class="food_items">
+                <p class="name">Pongal(1)</p>
+                <p class="rate">Rs. 30</p>
+            </div>
+            <div class="sum">
+                <p class="lsum">Delivery time</p>
+                <div class="dtime">
+                    <p class="time">(Tomorrow)Morning</p>
+                </div>
+            </div>
+            <div class="sum">
+                <h4 class="lsum">Delivery charge</h4>
+                <p class="rsum">Free</p>
+            </div>
+            <div class="selected-address">
+                <div class="top-tittle">
+                    <h4 class="shippment-address">Enter Shipping Address</h4>
+                    <textarea name="" id="address" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div id="sum_total" class="sum">
+                <div class="total">
+                    <h4 class="lsum">Total</h4>
+                    <p id="total_cost" class="rsum">Rs. 93</p>
+                </div>
+            </div>
+            <button class="place_order" type="button">Place Order</button>
+        </div>
+    </div>
+</div>
