@@ -1,0 +1,23 @@
+<div class="box">
+    <h4 class="head-kitchen">Annapoorani's kitchen</h4>
+    <img src={{@image}} alt="{{@name}} image">
+    <div class="border">
+        <h4>{{@name}}</h4>
+        <div class="info_box">
+            <div class="info">
+                <h5>Type</h5>
+                <p>{{@food_type}}</p>
+            </div>
+            <div class="info">
+                <h5>Quantity</h5>
+                <p>{{@quantity}} {{@quantity_type}}</p>
+            </div>
+        </div>
+        <div class="price">
+            <p class="food_price">Rs.{{@price}}</p>
+            <LinkTo @route="cart" @model={{@id}}>
+                <button type="button" class="addCart">Add to cart</button>
+            </LinkTo>
+        </div>
+    </div>
+</div>

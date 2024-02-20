@@ -7,6 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
+  this.route('signin');
   this.route('menu');
   this.route('cart', { path: 'cart/:item_id' });
   this.route('profile');
@@ -16,5 +17,4 @@ Router.map(function () {
   });
   this.route('error', { path: '/*path' });
   this.route('signup', { path: 'create/new' });
-  this.route('signin');
 });

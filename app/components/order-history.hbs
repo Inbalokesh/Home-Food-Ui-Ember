@@ -1,0 +1,19 @@
+<div class="obox">
+    <div class="item">
+        <div class="ihead">
+            <h3>Order:#{{@count}}</h3>
+        </div>
+        <h3>Items(1)</h3>
+        <p>14th February 2024,Wed 6:38:57 PM</p>
+    </div>
+    <div class="order">
+        <OrderHistory::ProductName />
+        <div class="order_by">
+            <h4>Ordered by: {{@name}}</h4>
+        </div>
+
+        <LinkTo @route="order.item" @model={{@id}} class="view_button">
+            <button type="button">View details</button>
+        </LinkTo>
+    </div>
+</div>

@@ -216,7 +216,7 @@ button:hover {
 
 .head-kitchen {
   margin: 0;
-  background-color: #f73269;
+  background-color: #16804e;
   color: white;
   padding: 10px 39px;
   border-radius: 10px 10px 0 0;
@@ -379,6 +379,7 @@ input[type="number"] {
 .food_items {
   display: flex;
   place-content: center space-between;
+  margin-bottom: 10px;
 }
 
 .sum h4,
@@ -997,42 +998,46 @@ section.order_details {
 }
 
 /* SignUp Css */
-.log img{
-  height:30%;
-  width:50%;
+.log img {
+  height: 30%;
+  width: 50%;
   position: relative;
-  left:90px;
+  left: 90px;
 }
 
-.new img{
-  width:200px;
+.new img {
+  width: 200px;
   position: relative;
-  left:29%;
+  left: 29%;
 }
 
-.log{
+.log {
   display: flex;
   justify-content: center;
   position: relative;
-  top:150px;
+  top: 150px;
 }
 
-.signupbox{
+.signupbox {
   width: 450px;
   height: 780px;
   margin: auto;
   margin-top: 120px;
   border-radius: 3px;
-  background-color: rgb(246, 246, 246);
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: rgb(246 246 246);
+  box-shadow:
+    rgb(60 64 67 / 30%) 0 1px 2px 0,
+    rgb(60 64 67 / 15%) 0 2px 6px 2px;
 }
 
-.loginbox{
+.loginbox {
   width: 340px;
   height: 470px;
   border-radius: 10px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  background-color: rgb(246, 246, 246);
+  box-shadow:
+    rgb(60 64 67 / 30%) 0 1px 2px 0,
+    rgb(60 64 67 / 15%) 0 2px 6px 2px;
+  background-color: rgb(246 246 246);
 }
 
 .form-title {
@@ -1044,13 +1049,13 @@ section.order_details {
   margin-left: 20px;
 }
 
-.form label{
+.form label {
   display: flex;
   margin-top: 20px;
   font-size: 17px;
 }
 
-.form input{
+.form input {
   width: 132%;
   padding: 7px;
   border: none;
@@ -1058,14 +1063,15 @@ section.order_details {
   border-radius: 3px;
 }
 
-.form input.inp{
-  width:95%;
-}
-.form button.btn-secondary{
-  width:412px;
+.form input.inp {
+  width: 95%;
 }
 
-.form button{
+.form button.btn-secondary {
+  width: 412px;
+}
+
+.form button {
   width: 300px;
   height: 35px;
   margin-top: 10px;
@@ -1075,21 +1081,21 @@ section.order_details {
   font-size: 18px;
 }
 
-.form input.but{
-  width:100%;
+.form input.but {
+  width: 100%;
 }
 
-.form button:hover{
+.form button:hover {
   transform: scale(1.02);
 }
 
-.f-note{
+.f-note {
   text-align: center;
   padding-top: 5px;
   font-size: 15px;
 }
 
-h5.password_note{
-  color: #393E46;
-  width:26rem;
+h5.password_note {
+  color: #393e46;
+  width: 26rem;
 }
