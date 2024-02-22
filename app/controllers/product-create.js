@@ -2,31 +2,32 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 
-export default class SigninController extends Controller {
-  @service session;
+export default class ProductCreateController extends Controller {
   @service router;
 
   @action
-  async login(event) {
+  async productCreate(event) {
     event.preventDefault();
-
     try {
-      let response = await fetch('http://localhost:3000/login', {
+      let response = await fetch('http://localhost:3000/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          mobile_number: this.mobileNumber,
-          password: this.password,
+          image: this.image,
+          name: this.name,
+          food_type: this.type,
+          price: this.price,
+          stock: this.stock,
+          quantity: this.quantity,
+          quantity_type: this.quantityType,
+          cook_id: this.cook,
         }),
       });
 
       if (response.ok) {
-        let responseData = await response.json();
-        let currentUser = responseData.current_user;
-        this.session.set('userId', currentUser);
-        this.router.transitionTo('profile');
+        this.router.transitionTo('products');
       } else {
         console.log('Invalid');
       }

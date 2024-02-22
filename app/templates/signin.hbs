@@ -8,11 +8,11 @@
         <form class="form" {{on "submit" this.login}}>
             <label>Mobile No</label>
             <input type="tel" class="inp" id="mobileNumber" pattern="[6-9]{1}[0-9]{9}" maxlength="10"
-                placeholder="Mobile No" name="mobileNumber"  {{on "input" (action (mut this.mobileNumber) value="target.value")}} value={{this.mobileNumber}} required="">
+                placeholder="Mobile No" name="mobileNumber"  {{on "input" (action (mut this.mobileNumber) value="target.value")}} required="">
             <label>Password</label>
             <input type="password" class="inp" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
-                placeholder="Password" name="password" {{on "input" (action (mut this.password) value="target.value")}} value={{this.password}} required="">
+                placeholder="Password" name="password" {{on "input" (action (mut this.password) value="target.value")}} required="">
             <button type="submit" class="but" id="logIn">Login</button>
         </form>
         <div>

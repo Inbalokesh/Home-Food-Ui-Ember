@@ -1,0 +1,140 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container {
+        text-align: center;
+        margin: 80px auto;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style the form heading */
+    h1 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* Style the form labels and input fields */
+    label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #555;
+        text-align: left;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="url"] {
+        text-align: start;
+        font-weight: normal;
+        margin-top: 0;
+        width: 95%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        transition: border-color 0.3s;
+        background-color: white;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="url"]:focus {
+        border-color: #007bff;
+    }
+
+    /* Style the form button */
+    button {
+        background-color: #828481;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 24px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #5cb748;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #product_type {
+        padding: 12px 8px;
+        width: 100%;
+        color: #555;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 11px;
+        border: 1px solid #ccc;
+    }
+
+    option {
+        color: #555;
+        background-color: transparent;
+    }
+</style>
+
+<body>
+
+    {{!-- app/templates/edit-product.hbs --}}
+    <div class="container">
+        <h1>Edit Product</h1>
+
+        <form {{on "submit" this.productUpdate}}>
+            <input type="hidden" name="productId" value={{@model.id}}>
+            <label>Image:</label>
+            <input type="url" name="image" value="{{@model.image}}" {{on "input" (action (mut this.image) value="target.value")}} pattern="https://.*" required /><br>
+
+            <label>Food Name:</label>
+            <input type="text" name="name" value="{{@model.name}}" minlength="3" pattern="[a-zA-Z ]+" {{on "input" (action (mut this.name) value="target.value")}}
+            required /><br>
+
+            <label for="type">Type</label>
+            <input type="text" id="type" name="name" value="{{@model.food_type}}" {{on "input" (action (mut this.type) value="target.value")}} minlength="3" pattern="^(Veg|Non-Veg)$" required /><br>
+
+            <label>Price:</label>
+            <input type="number" name="price" min="1" value="{{@model.price}}" {{on "input" (action (mut this.price) value="target.value")}} max="999" required /><br>
+
+            <label>Quantity:</label>
+            <input type="number" name="quantity" min="1" value="{{@model.quantity}}" {{on "input" (action (mut this.quantity) value="target.value")}} max="999" required /><br>
+
+            <label>Quantity Type:</label>
+            <input type="text" name="quantity_type" value="{{@model.quantity_type}}" {{on "input" (action (mut this.quantityType) value="target.value")}} pattern="[a-zA-Z ]+"
+                required /><br>
+
+            <label for="stock">Stock:</label>
+            <input type="number" min="1" max="20" id="stock" value="{{@model.stock}}" {{on "input" (action (mut this.stock) value="target.value")}} name="stock" required /><br>
+
+            <div class="buttons">
+                <LinkTo @route="products">
+                    <button type="button">Back</button>
+                </LinkTo>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

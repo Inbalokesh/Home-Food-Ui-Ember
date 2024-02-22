@@ -37,9 +37,17 @@
             My Orders
         </h2>
         <div class="overflowbox">
+            {{!-- {{log @model.orders}}
+            {{log @model.filteredProducts}} --}}
 
-            {{#each @model.orders as |order index|}}
-                <OrderHistory @id={{order.id}} @name={{@model.user.name}} @count={{incrementIndex index}}/>
+            {{#each @model.filteredProducts as |item index|}}
+                {{log index}}
+                <OrderHistory 
+                    @id={{item.id}} 
+                    @name={{@model.user.name}} 
+                    @count={{incrementIndex index}}
+                    @productName={{item.name}} 
+                    @orderId={{get @model.orders "2"}} />
             {{/each}}
 
         </div>

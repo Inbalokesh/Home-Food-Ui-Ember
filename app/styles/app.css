@@ -1099,3 +1099,84 @@ h5.password_note {
   color: #393e46;
   width: 26rem;
 }
+
+/* Products */
+
+:-webkit-scrollbar {
+  display: none;
+}
+
+.div-table {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.heading {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Style the table container */
+#table-box {
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  padding-top: 20px;
+}
+
+/* Style the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Style the table header */
+th {
+  background-color: #23407d;
+  color: #fff;
+  padding: 15px;
+}
+
+/* Style the table rows */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style the table cells */
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* Style the Edit and Delete buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button.product-button {
+  padding: 8px 16px;
+  background-color: #4caf50; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.product-button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Style the image */
+img.product_image {
+  max-height: 70px;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  width: 110px;
+}

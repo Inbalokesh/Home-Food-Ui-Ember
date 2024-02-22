@@ -7,12 +7,21 @@
         <p>14th February 2024,Wed 6:38:57 PM</p>
     </div>
     <div class="order">
-        <OrderHistory::ProductName />
+    {{!-- <OrderHistory::ProductName @productName={{@product_name}} /> --}}
+        <div class="item_list">
+            <h4>{{@productName}}(2)</h4>
+        </div>
+
+        <div class="total">
+            <h3>Total</h3>
+            <h4>Rs. {{20}}</h4>
+        </div>
         <div class="order_by">
             <h4>Ordered by: {{@name}}</h4>
         </div>
 
-        <LinkTo @route="order.item" @model={{@id}} class="view_button">
+        {{log @orderId}}
+        <LinkTo @route="order.item" @model={{@orderId}} class="view_button">
             <button type="button">View details</button>
         </LinkTo>
     </div>

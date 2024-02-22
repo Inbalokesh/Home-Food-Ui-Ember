@@ -17,4 +17,9 @@ Router.map(function () {
   });
   this.route('error', { path: '/*path' });
   this.route('signup', { path: 'create/new' });
+  this.route('users');
+  this.route('home');
+  this.route('products');
+  this.route('product-create', { path: 'product/create/new' });
+  this.route('product-edit', { path: 'product/edit/:product_id' });
 });

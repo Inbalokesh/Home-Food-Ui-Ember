@@ -1,0 +1,32 @@
+<h1 class="heading">PRODUCTS</h1>
+<div class="div-table">
+    <LinkTo @route="product-create"><button>Create</button></LinkTo>
+    <table id="table-box">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Quantity Type</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        {{#each @model as |product|}}
+        <tr>
+            <td><img class="product_image" src="{{product.image}}" alt="{{product.image}} Image" height="70px"></td>
+            <td>{{product.name}}</td>
+            <td>{{product.type}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.quantity_type}}</td>
+            <td><LinkTo @route="product-edit" @model={{product.id}}>
+                    <button class="product-button" type="button">Edit</button>
+                </LinkTo></td>
+            <DeleteProduct @product_id={{product.id}}/>
+        </tr>
+        {{/each}}
+    </table>
+</div>

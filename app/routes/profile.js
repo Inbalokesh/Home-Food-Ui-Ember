@@ -9,17 +9,14 @@ export default class ProfileRoute extends Route {
     let userId = this.session.get('userId');
 
     let user = await this.store.findRecord('users', userId);
+
     let orders = await this.store.query('orders', {
       filter: {
         user_id: userId,
       },
     });
 
-    console.log(orders);
-
     let products = await this.store.findAll('products');
-
-    console.log(products);
 
     let filteredProducts = [];
 
@@ -30,7 +27,12 @@ export default class ProfileRoute extends Route {
       filteredProducts.push(...matchingProducts);
     });
 
-    console.log(filteredProducts);
+    // let filteredProducts = orders.flatMap(order => {
+    //   let matchingProducts = products.filter(product => product.id == order.product_id);
+    //   return matchingProducts.map(product => ({ ...product, product_id: product.id }));
+    // });
+
+    // console.log(filteredProducts)
 
     return { user, orders, filteredProducts };
   }
